@@ -11,8 +11,7 @@ function initiateSTKPush($accessToken, $shortcode, $passkey, $amount, $phone, $b
         die('Access token is invalid or not available.');
     }
 
-    $url = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest'; // Ensure the correct endpoint is used
-
+    $url = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest'; 
     $timestamp = date('YmdHis');
     $password = base64_encode($shortcode . $passkey . $timestamp);
 
@@ -125,7 +124,7 @@ error_log("Initiating payment: Phone: $phone, Amount: $amount");
 
 // Use your actual values
 $shortcode = ''; // Business Shortcode for PayBill
-$passkey = ''; // Replace with your actual passkey
+$passkey = ''; // Replace with actual passkey
 $businessTill = ''; // Your business short code or till number
 
 // Call the initiateSTKPush function
