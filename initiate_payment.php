@@ -134,7 +134,7 @@ $response = initiateSTKPush($accessToken, $shortcode, $passkey, $amount, $phone,
 if (isset($response['ResponseCode']) && $response['ResponseCode'] == '0') {
     echo json_encode(['success' => 'Payment initiated successfully.', 'data' => $response]);
 } else {
-    echo json_encode(['error' => 'Failed to initiate payment.', 'details' => $response]); // Include details if available
+    echo json_encode(['error' => 'Failed to initiate payment.', 'details' => $response]);
 }
 
 $conn->close();
